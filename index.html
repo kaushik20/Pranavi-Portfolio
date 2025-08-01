@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Join us for Sri Pranavi Chintalapudi's Ranga Pravesam at Ravindra Bharathi Auditorium, a celebration of her Kuchipudi journey. Event details, RSVP, and gallery.">
+    <meta name="keywords" content="Ranga Pravesam, Kuchipudi, Ravindra Bharathi, Indian Classical Dance, Pranavi Chintalapudi, Dance Performance, Cultural Event">
+    <meta name="author" content="Pranavi Chintalapudi">
+    <meta property="og:title" content="Sri Pranavi Chintalapudi's Ranga Pravesam Celebration" />
+    <meta property="og:description" content="Celebrate Sri Pranavi Chintalapudi's Kuchipudi debut at Ravindra Bharathi Auditorium. RSVP and explore her dance journey." />
+    <meta property="og:url" content="https://pranavi-rangapravesam.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./Images/pranavi-hero.jpg" />
+    <meta name="robots" content="index,follow">
+    <title>Sri Pranavi Chintalapudi - Ranga Pravesam Celebration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+      :root {
+        --bg-color: #fffaf0;
+        --text-color: #2c0b0e;
+        --hero-bg: linear-gradient(135deg, #8b0000, #ffd700);
+        --card-bg: linear-gradient(135deg, #228b22, #ffd700);
+        --button-bg: #8b0000;
+        --button-hover: #a52a2a;
+        --progress-bg: #f5e6cc;
+        --progress-fill: linear-gradient(135deg, #228b22, #ffd700);
+        --footer-bg-dark: #2c0b0e;
+        --footer-text-dark: #fffaf0;
+        --header-bg: rgba(44, 11, 14, 0.9);
+        --header-scrolled-bg: rgba(44, 11, 14, 0.95);
+        --animation-duration: 0.3s;
+        --achievement-container-bg: #f8f0e3;
+        --achievement-item-bg: #fffaf0;
+        --achievement-icon-color: var(--button-bg);
+        --achievement-text-color: var(--text-color);
+        --badge-bg: linear-gradient(135deg, #ffd700, #d4a017);
+        --badge-border: #b8860b;
+        --badge-shadow: rgba(0, 0, 0, 0.4);
+        --badge-text: #2c0b0e;
+        --badge-ribbon: #8b0000;
+        --badge-glow: rgba(255, 215, 0, 0.6);
+      }
+      [data-theme="light"] {
+        --bg-color: #ffffff;
+        --text-color: #2c0b0e;
+        --hero-bg: linear-gradient(135deg, #228b22, #ffd700);
+        --card-bg: linear-gradient(135deg, #8b0000, #ffd700);
+        --button-bg: #228b22;
+        --button-hover: #006400;
+        --progress-bg: #f0f0f0;
+        --progress-fill: linear-gradient(135deg, #8b0000, #ffd700);
+        --header-bg: #ffffff;
+        --header-scrolled-bg: #ffffff;
+        --footer-bg-dark: #f5e6cc;
+        --footer-text-dark: #2c0b0e;
+        --achievement-container-bg: #e0e0e0;
+        --achievement-item-bg: #ffffff;
+        --achievement-icon-color: var(--button-bg);
+        --achievement-text-color: var(--text-color);
+        --badge-bg: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+        --badge-border: #a9a9a9;
+        --badge-shadow: rgba(0, 0, 0, 0.3);
+        --badge-text: #2c0b0e;
+        --badge-ribbon: #228b22;
+        --badge-glow: rgba(192, 192, 192, 0.5);
+      }
+      html, body {
+        font-family: 'Lora', serif;
+        background: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        background: var(--header-bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+      header.scrolled {
+        background: var(--header-scrolled-bg);
+        height: 50px;
+      }
+      header .logo img {
+        height: 50px;
+        transition: transform var(--animation-duration) ease;
+      }
+      header .logo img:hover {
+        transform: scale(1.05);
+      }
+      .nav-links {
+        display: flex;
+        gap: 15px;
+      }
+      .nav-links .nav-item {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color var(--animation-duration) ease;
+      }
+      .nav-links .nav-item:hover, .nav-links .nav-item.active {
+        background: var(--button-bg);
+        color: var(--bg-color);
+      }
+      .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
+        margin-right: 1rem;
+      }
+      #narration-toggle {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-color);
+        margin-left: 1rem;
+        transition: transform 0.2s ease;
+      }
+      #narration-toggle:hover {
+        transform: scale(1.1);
+      }
+      #hero {
+        text-align: center;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: var(--hero-bg);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+      }
+      #hero h1 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        margin-bottom: 1rem;
+      }
+      #hero p {
+        font-size: 1.2rem;
+        color: #fffaf0;
+        margin-bottom: 1.5rem;
+      }
+      .cta-btn {
+        padding: 0.8rem 2rem;
+        background: var(--button-bg);
+        color: #fffaf0;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .cta-btn:hover {
+        background: var(--button-hover);
+        transform: scale(1.05);
+      }
+      .section {
+        padding: 3rem 1rem;
+        text-align: center;
+        background: var(--bg-color);
+        color: var(--text-color);
+      }
+      .section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--button-bg);
+      }
+      .section-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        opacity: 0.8;
+      }
+      .guru-content-box {
+        background: var(--achievement-item-bg);
+        padding: 30px;
+        margin: 2rem auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        max-width: 800px;
+        text-align: center;
+      }
+      .guru-content-box img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 2rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+      .guru-content-box p {
+        text-align: justify;
+        margin-bottom: 1rem;
+      }
+      .section.boxed-section {
+        background: var(--achievement-item-bg);
+        padding: 3rem 2rem;
+        margin: 8rem auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        max-width: 900px;
+        text-align: center;
+        position: relative;
+      }
+      .section.boxed-section h2 {
+        margin-bottom: 0.5rem;
+      }
+      .section.boxed-section .section-subtitle {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      .section.boxed-section img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 2rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      }
+      .section.boxed-section p {
+        text-align: justify;
+        margin-bottom: 1rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #achievements {
+        background: var(--achievement-container-bg);
+      }
+      .achievements-container {
+        background: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .achievement-item {
+        background: var(--achievement-item-bg);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 8px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      .achievement-item .card-header {
+        text-align: center;
+      }
+      .achievement-item i {
+        font-size: 48px;
+        color: var(--achievement-icon-color);
+        margin-bottom: 10px;
+      }
+      .achievement-item h3 {
+        color: var(--achievement-text-color);
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .achievement-item ul {
+        list-style-type: disc;
+        color: var(--achievement-text-color);
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      .achievement-item ul li {
+        color: var(--achievement-text-color);
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      .gallery-item {
+        background: var(--card-bg);
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+      .gallery-item img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+      .badge-container {
+        background: var(--badge-bg);
+        color: var(--badge-text);
+        border-radius: 12px;
+        width: 180px;
+        height: 220px;
+        box-shadow: 0 4px 8px var(--badge-shadow);
+        border: 3px solid var(--badge-border);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .badge-content {
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+      .badge-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--badge-text);
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+      }
+      .badge-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .badge-message {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        font-style: italic;
+      }
+      .badge-container::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 35px;
+        background: var(--badge-ribbon);
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        z-index: 1;
+      }
+      .badge-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 20%) center/20px 20px;
+        opacity: 0.5;
+        pointer-events: none;
+        animation: sparkle 2s infinite;
+      }
+      #badges .badge-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      :focus {
+        outline: 2px solid var(--button-bg);
+        outline-offset: 2px;
+      }
+      footer {
+        background: var(--footer-bg-dark);
+        color: var(--footer-text-dark);
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .contact-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .contact-item a {
+        color: var(--footer-text-dark);
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
+      .contact-item a:hover {
+        color: var(--button-bg);
+      }
+      #rsvp form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      #rsvp input, #rsvp select {
+        padding: 0.8rem;
+        border: 1px solid var(--text-color);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: 'Lora', serif;
+      }
+      #rsvp button {
+        padding: 0.8rem;
+        background: var(--button-bg);
+        color: #fffaf0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #rsvp button:hover {
+        background: var(--button-hover);
+      }
+      #theme-toggle {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-color);
+        margin-left: 1rem;
+      }
+      .footer-bar {
+        background-color: #121212;
+        color: #ffffff;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        border-top: 2px solid #4dabf7;
+        text-align: center;
+      }
+      .footer-bar p {
+        margin: 0;
+      }
+      .footer-bar button {
+        background: none;
+        color: inherit;
+        border: none;
+        font-size: inherit;
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+      .footer-bar button:hover {
+        color: #4dabf7;
+        transform: scale(1.05);
+      }
+      @keyframes gradientAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes sparkle {
+        0% { background-position: center; opacity: 0.5; }
+        50% { background-position: 100% 100%; opacity: 0.7; }
+        100% { background-position: center; opacity: 0.5; }
+      }
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background: var(--header-bg);
+          padding: 1rem;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        #hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        #hero img {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+        .badge-container {
+          width: 150px;
+          height: 180px;
+        }
+        .badge-title {
+          font-size: 1rem;
+        }
+        .badge-message {
+          font-size: 0.8rem;
+        }
+        .badge-icon {
+          font-size: 2rem;
+        }
+        #badges .badge-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#hero">
+          <img src="./Images/logo.webp" alt="Pranavi Ranga Pravesam Logo">
+        </a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">Introduction</a>
+        <a href="#guru" class="nav-item">About Teacher</a>
+        <a href="#venue" class="nav-item">Venue</a>
+        <a href="#achievements" class="nav-item">Achievements</a>
+        <a href="#event" class="nav-item">Event Details</a>
+        <a href="#invitation" class="nav-item">Invitation</a>
+        <a href="#chief-guests" class="nav-item">Chief Guests</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#rsvp" class="nav-item">RSVP</a>
+        <a href="#badges" class="nav-item">Badges</a>
+      </nav>
+      <button id="narration-toggle" aria-label="Toggle narration"><i class="fas fa-play"></i></button>
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+    </header>
+    <main>
+      <section id="hero">
+        <div style="display: flex; align-items: center; justify-content: center; padding: 2rem;">
+          <div style="flex-shrink: 0; text-align: center;">
+            <img src="./Images/Header.webp" alt="Pranavi in Kuchipudi attire during practice" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
+          </div>
+          <div style="max-width: 600px; text-align: left;">
+            <h1>Welcome to Sri Pranavi Chintalapudi's Ranga Pravesam</h1>
+            <p>Celebrating the journey of Sri Pranavi Chintalapudi's Kuchipudi debut, from beginner to a Professional. A milestone in her 11-year journey of dedication and artistry.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+              <a href="#event" class="cta-btn">Event Details</a>
+              <a href="#rsvp" class="cta-btn">RSVP Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section">
+        <h2>About Sri Pranavi Chintalapudi</h2>
+        <p class="section-subtitle">Her journey in Kuchipudi and beyond</p>
+        <p>Sri Pranavi Chintalapudi is an aspiring Engineering student at BITS Pilani, Dubai Campus in Computer Science, and a dedicated Kuchipudi dancer, training under Smt. Preethi Tatambhotla for the past eight years.</p>
+        <p>She started learning Kuchipudi at an age of 5 and blossomed into an accomplished dancer under tutelage of Preethi.</p>
+        <p>A certified Kuchipudi dancer from University of Silicon Andhra, USA, currently pursuing her Diploma while aptly balancing her academics.</p>
+        <p>Pranavi has played lead roles with her Guru in ballets like Kalyana Srinivasam and Navarasa Natabhamini and won accolades from artists such as Sri Tanikella Bharani Garu and Oscar Awardee Sri Chandra Bose Garu.</p>
+        <p>A recipient of titles, “Nritya Vismaya” and “Naatya Surabhi”, she performed across India and UAE at various religious and cultural venues such as Nadaneerajanam, Guruvayoor, Chidambaram and Kolhapur.</p>
+        <p>Pranavi is a winner of several prizes which include Shobha Naidu International Award, initiated in the memory of the Guru of her Guru.</p>
+        <p>A versatile artist, a devoted rasika of music, Pranavi began learning Carnatic music at the age of five, completed the 4th grade of 8-Grade music certification offered by Bridge Academy, Chennai with an “Outstanding” remark.</p>
+        <p>An ardent lover of instruments, she earned acclaim on Carnatic Violin.</p>
+        <p>An aspiring polyglot, she is committed to mastering Sanskrit from Samskrutha Bharathi Institute LLC, Dubai.</p>
+      </section>
+      <section id="guru" class="section boxed-section">
+        <h2>Meet Guru Srimati Preethi Tatambhotla</h2>
+        <p class="section-subtitle">Guiding Pranavi's artistic journey</p>
+        <img src="./Images/images.webp" alt="Srimati Preethi Tatambhotla, Pranavi's Kuchipudi Guru" loading="lazy">
+        <p>Guru Smt. Preethi Tatambhotla is an accomplished Kuchipudi dancer and a devoted disciple of the legendary Padma Shri Dr. Sobha Naidu.</p>
+        <p>Her journey began at the age of seven and has grown into a lifelong dedication to the art. She has performed across prestigious stages in India, both as a soloist and in her guru’s celebrated productions.</p>
+        <p>She is the recipient of several titles, including Nritya Mani, Nritya Vilasini, Nritya Jyothi, Satyabhama, and Saptarang Kala Bhushan. A two-time Guinness World Record holder, a Young Artiste Scholarship awardee from the Ministry of Culture and a Doordarshan accredited artiste, her talent has received wide acclaim. Smt. Preethi holds a Master’s degree in Kuchipudi from the University of Silicon Andhra.</p>
+        <p>Beyond performance, she curated Nrithyarchana, a UAE-based initiative celebrating classical dance.</p>
+        <p>She has had the honour of performing before dignitaries such as Prime Minister Shri Narendra Modi, former Vice President Shri M. Venkaiah Naidu, and AP Chief Minister Shri N. Chandrababu Naidu.</p>
+        <p>She has been recognized by multiple organizations extensively across UAE, India, and other countries for her contribution towards the world of Indian classical Dance.</p>
+        <p>With a vision to promote Kuchipudi globally, she founded Tanmayi Art Studio in the UAE, where she trains and mentors aspiring dancers. As a performer, choreographer, and guru, Smt. Preethi Tatambhotla continues to carry forward her guru’s legacy, inspiring the next generation to shine through classical dance.</p>
+      </section>
+      <section id="venue" class="section boxed-section">
+        <h2>Venue: Ravindra Bharathi Auditorium</h2>
+        <p class="section-subtitle">A Cultural Landmark in Hyderabad</p>
+        <img src="./Images/Ravindra_Bharathi_Auditorium.webp" alt="Ravindra Bharathi Auditorium exterior" loading="lazy">
+        <p>Ravindra Bharathi, located in Hyderabad, Telangana, is a prestigious auditorium named after the renowned poet Rabindranath Tagore.</p>
+        <p>Established to mark Tagore’s birth centenary, its foundation was laid on March 23, 1960, by Bezawada Gopala Reddy, then Governor of Uttar Pradesh and former Chief Minister of Andhra State.</p>
+        <p>Designed by architect Mohammad Fayazuddin, the auditorium was inaugurated on May 11, 1961, by former President of India, Sarvepalli Radhakrishnan, with a performance of Tagore’s <em>Mukta Dhara</em>.</p>
+        <p>Artists like Shobha Naidu, Kavita Krishnamurthy, L. Subramaniam, Yamini Reddy and Ustad Shahid Parvez Khan have graced its stage, making it a cultural landmark</p>
+        <p>Performing here is often considered a defining moment in a performing artist’s career.</p>
+        <p>For over six decades, Ravindra Bharathi has been a cultural hub, hosting classical dance, music, and theater performances, making it the perfect stage for Sri Pranavi Chintalapudi’s Ranga Pravesam.</p>
+        <p>The auditorium offers ample seating, modern facilities, and convenient access via public transport and parking, ensuring a comfortable experience for all attendees.</p>
+      </section>
+      <section id="achievements" class="section">
+        <h2>Achievements</h2>
+        <p class="section-subtitle">Celebrating Pranavi's accomplishments</p>
+        <div class="achievements-container">
+          <div class="achievement-item">
+            <div class="card-header">
+              <i class="fas fa-theater-masks"></i>
+              <h3>Kuchipudi Dance</h3>
+            </div>
+            <ul>
+              <li>1st Prize - Virtual International Competition (Spring Nectar Foundation, USA)</li>
+              <li>Earned titles "Nritya Vismaya" and "Naatya Surabhi" at Devdasi Nritya Mandir, Orissa</li>
+              <li>Won 2nd Prize - Shobha Naidu Awards 2021</li>
+              <li>Lead Roles - Kalyana Srinivasam and Navarasa Natabhamini ballets by Tanmayi Art Studio</li>
+              <li>Won Gold Medal (1st Prize) - Indywood Talent Hunt International 2021 (UAE)</li>
+              <li>Certified in Kuchipudi by the University of Silicon Andhra</li>
+            </ul>
+          </div>
+          <div class="achievement-item">
+            <div class="card-header">
+              <i class="fas fa-microphone"></i>
+              <h3>Carnatic Vocal Music</h3>
+            </div>
+            <ul>
+              <li>2nd Prize - Margazhi Utsavam (Reha Music and Dance Institute)</li>
+              <li>3rd Prize - Sangeet Samrat 2018 (Vibgyor Live)</li>
+              <li>2nd Prize - Vivek 157 (Consulate General of India, Dubai)</li>
+              <li>Passed with First Class in Parambhikm Part 2 (Carnatic Music - Theory & Practical) from Pracheen Kala Kendra</li>
+              <li>Regularly Participated in the Guruvandanam program (Team Mohana)</li>
+              <li>Participated in the Epic Choir Event (Reha Music and Dance Institute)</li>
+              <li>Outstanding performance in Bridge Academy Exams.</li>
+            </ul>
+          </div>
+          <div class="achievement-item">
+            <div class="card-header">
+              <i class="fas fa-book"></i>
+              <h3>Sanskrit</h3>
+            </div>
+            <ul>
+              <li>1st Class distinction - Pravasha, Parichaya Patravalaya Samskritha Bharathi Institute LLC</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="event" class="section">
+        <h2>Event Details</h2>
+        <p class="section-subtitle">Join us for this special occasion</p>
+        <p><strong>Date:</strong> August 2, 2025<br>
+           <strong>From:</strong> 5:00 PM IST<br>
+           <strong>To:</strong> 9:00 PM IST<br>
+           <strong>Venue:</strong> Ravindra Bharathi Auditorium, Hyderabad, Telangana<br>
+           <strong>Performance By:</strong> Sri Pranavi Chintalapudi<br>
+           <strong>Guru:</strong> Smt. Preethi Tatambhotla</p>
+        <div id="countdown" style="font-size: 1.5rem; margin: 1rem 0;"></div>
+        <div id="map-container">
+          <iframe src="https:\\www.google.com\maps\embed?pb=!1m18!1m12!1m3!1d2731.449079799757!2d78.46437597331817!3d17.403433702346334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3291b9b7df7dff%3A0xdfe0d76e802d3b30!2sRavindra%20Bharathi!5e1!3m2!1sen!2sin!4v1753945400642!5m2!1sen!2sin" width="1100" height="450" style="border:0;" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <img id="offline-map" src="https://upload.wikimedia.org/wikipedia/commons/2/27/Ravindra_Bharathi%2C_Hyderabad.jpg" alt="Map Fallback" style="display: none; width: 100%; border-radius: 12px;" />
+        </div>
+      </section>
+      <section id="invitation" class="section">
+        <h2>Invitation for Ranga Pravesam</h2>
+        <p class="section-subtitle">A warm invitation to grace the occasion with your presence.</p>
+        <div class="invitation-placeholder">
+          <iframe src="./Invitation/SPCH Bro 01 A.pdf" width="80%" height="1000px" style="border-radius: 12px;"></iframe>
+        </div>
+      </section>
+      <section id="chief-guests" class="section">
+        <h2>Chief Guests</h2>
+        <p class="section-subtitle">Here are the Guests for the event</p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./Images/Shridhar_Babu.webp" alt="Shridhar Babu" loading="lazy">
+            <p>Shri D.Sridhar Babu</p>
+            <p>Honorable Minister of IT, Govt of Telangana</p>
+          </div>
+          <div class="gallery-item">
+            <img src="./Images/Anuradha.webp" alt="Dr Jonnalagadda Anuradha" loading="lazy">
+            <p>Dr Shrimathi Jonnalagadda Anuradha</p>
+            <p>Head of Department of Dance, University of Hyderabad</p>
+          </div>
+          <div class="gallery-item">
+            <img src="./Images/Prince_Rama_Verma.webp" alt="Prince Rama Verma" loading="lazy">
+            <p>Shri Prince Rama Verma</p>
+            <p>Carnatic Music Exponent and Member of Royal Family of Travancore</p>
+          </div>
+        </div>
+      </section>
+      <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <p class="section-subtitle">Moments from Pranavi's dance journey</p>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="./Images/Pranavi_Nadaneerajanam.webp" alt="Pranavi at Nadaneerajanam" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="./Images/Pranavi_Guruvayur.webp" alt="Pranavi at Guruvayur" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="./Images/Pranavi_Kolhapur.webp" alt="Pranavi at Kolhapur" loading="lazy">
+          </div>
+        </div>
+      </section>
+      <section id="rsvp" class="section">
+        <h2>RSVP</h2>
+        <p class="section-subtitle">Let us know you're coming!</p>
+        <form id="rsvp-form" action="https://formspree.io/f/myzpwqzg" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+          <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+          <select name="attendance" required aria-label="Attendance Status">
+            <option value="" disabled selected>Will you attend?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <button type="submit">Submit RSVP</button>
+        </form>
+      </section>
+      <section id="badges" class="section">
+        <h2>Badge Dashboard</h2>
+        <p class="section-subtitle">Celebrate your exploration of Pranavi's Ranga Pravesam</p>
+        <div class="badge-grid">
+          <div id="badge-container-about" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-user badge-icon"></i>
+              <h3 class="badge-title">Welcome Badge</h3>
+              <p class="badge-message">Explored Pranavi's Journey!</p>
+            </div>
+          </div>
+          <div id="badge-container-guru" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-graduation-cap badge-icon"></i>
+              <h3 class="badge-title">Guru's Dedication</h3>
+              <p class="badge-message">Honored the Guru!</p>
+            </div>
+          </div>
+          <div id="badge-container-venue" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-building badge-icon"></i>
+              <h3 class="badge-title">Venue Explorer</h3>
+              <p class="badge-message">Discovered Ravindra Bharathi!</p>
+            </div>
+          </div>
+          <div id="badge-container-achievements" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-trophy badge-icon"></i>
+              <h3 class="badge-title">Achievements Explorer</h3>
+              <p class="badge-message">Celebrated Pranavi's Success!</p>
+            </div>
+          </div>
+          <div id="badge-container-event" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-calendar-check badge-icon"></i>
+              <h3 class="badge-title">Event Explorer</h3>
+              <p class="badge-message">Discovered the Event!</p>
+            </div>
+          </div>
+          <div id="badge-container-invitation" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-envelope badge-icon"></i>
+              <h3 class="badge-title">Invitation Preview</h3>
+              <p class="badge-message">Checked the Invitation!</p>
+            </div>
+          </div>
+          <div id="badge-container-chief-guests" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-users badge-icon"></i>
+              <h3 class="badge-title">Guests</h3>
+              <p class="badge-message">Visited the Guests!</p>
+            </div>
+          </div>
+          <div id="badge-container-gallery" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-images badge-icon"></i>
+              <h3 class="badge-title">Gallery</h3>
+              <p class="badge-message">Browsed the Gallery!</p>
+            </div>
+          </div>
+          <div id="badge-container-rsvp" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-check-circle badge-icon"></i>
+              <h3 class="badge-title">RSVP Badge</h3>
+              <p class="badge-message">Joined the Celebration!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contact-items">
+        <div class="contact-item">
+          <a href="https://wa.me/+918341969157" target="_blank" aria-label="Contact via WhatsApp">Contact via WhatsApp</a>
+        </div>
+        <div class="contact-item">
+          <a href="mailto:chintalapudi0602@gmail.com" target="_blank" aria-label="Email Pranavi">chintalapudi0602@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.instagram.com/tanmayiartstudio/" target="_blank" aria-label="Follow Tanmayi Art Studio on Instagram"><i class="fab fa-instagram"></i> @tanmayiartstudio</a>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.instagram.com/spc2_01/" target="_blank" aria-label="Follow Tanmayi Art Studio on Instagram"><i class="fab fa-instagram"></i> @spc2_01</a>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>
+          <button id="backToTop">© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</button>
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         // Set current year
+         document.getElementById('current-year').textContent = new Date().getFullYear();
+         
+         // Hamburger menu toggle
+         const hamburger = document.querySelector('.hamburger');
+         const navLinks = document.querySelector('.nav-links');
+         hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+               ? '<i class="fas fa-times"></i>' 
+               : '<i class="fas fa-bars"></i>';
+         });
+
+         // Close menu when a nav link is clicked
+         document.querySelectorAll('.nav-links .nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+               navLinks.classList.remove('active');
+               hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+         });
+         
+         // Countdown timer
+         const eventDate = new Date('August 2, 2025 17:30:00 GMT+0530');
+         const countdown = document.getElementById('countdown');
+         if (countdown) {
+            setInterval(() => {
+               const now = new Date();
+               const diff = eventDate - now;
+               if (diff > 0) {
+                  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                  countdown.textContent = `${days}d ${hours}h ${minutes}m to the event!`;
+               } else {
+                  countdown.textContent = 'The event has started!';
+               }
+            }, 1000);
+         }
+         
+         // Navigation smooth scrolling
+         document.querySelectorAll("header .nav-links a").forEach(link => {
+            link.addEventListener("click", (e) => {
+               e.preventDefault();
+               const targetId = link.getAttribute("href").substring(1);
+               const targetSection = document.getElementById(targetId);
+               if (targetSection) {
+                  targetSection.scrollIntoView({ behavior: "smooth" });
+                  document.querySelectorAll(".nav-links .nav-item").forEach(item => item.classList.remove("active"));
+                  link.classList.add("active");
+               }
+            });
+         });
+         
+         // Sticky header
+         const header = document.querySelector('header');
+         window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+         });
+         
+         // Theme toggle
+         const themeToggle = document.getElementById('theme-toggle');
+         const savedTheme = localStorage.getItem('theme') || 'dark';
+         document.documentElement.setAttribute('data-theme', savedTheme);
+         themeToggle.innerHTML = `<i class="fas fa-${savedTheme === 'dark' ? 'moon' : 'sun'}"></i>`;
+         themeToggle.addEventListener('click', () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = `<i class="fas fa-${newTheme === 'dark' ? 'moon' : 'sun'}"></i>`;
+         });
+         
+         // RSVP form submission
+         const rsvpForm = document.getElementById('rsvp-form');
+         if (rsvpForm) {
+            rsvpForm.addEventListener('submit', async (e) => {
+               e.preventDefault();
+               const formData = new FormData(e.target);
+               const submitButton = e.target.querySelector('button');
+               submitButton.disabled = true;
+               submitButton.textContent = 'Submitting...';
+               try {
+                  const response = await fetch(e.target.action, {
+                     method: e.target.method,
+                     body: formData,
+                     headers: { 'Accept': 'application/json' }
+                  });
+                  if (response.ok) {
+                     alert('Thank you for your RSVP! We look forward to seeing you.');
+                     e.target.reset();
+                     // Mark RSVP badge as earned
+                     localStorage.setItem('badge-container-rsvp', 'earned');
+                     const rsvpBadge = document.getElementById('badge-container-rsvp');
+                     if (rsvpBadge) {
+                        rsvpBadge.classList.add('earned');
+                     }
+                  } else {
+                     const data = await response.json();
+                     alert('There was an error submitting your RSVP: ' + (data.errors ? data.errors.map(err => err.message).join(', ') : 'Unknown error.'));
+                  }
+               } catch (error) {
+                  console.error('Error submitting RSVP:', error);
+                  alert('A network error occurred. Please try again.');
+               } finally {
+                  submitButton.disabled = false;
+                  submitButton.textContent = 'Submit RSVP';
+               }
+            });
+         }
+         
+         // Back to top
+         document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+         });
+         
+         // Google Maps iframe
+         const mapIframe = document.querySelector('#event iframe');
+         if (mapIframe) {
+            mapIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731.449079799757!2d78.46437597331817!3d17.403433702346334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3291b9b7df7dff%3A0xdfe0d76e802d3b30!2sRavindra%20Bharathi!5e1!3m2!1sen!2sin!4v1753945400642!5m2!1sen!2sin";
+         }
+
+         // Badge persistence with IntersectionObserver
+         const badgeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  const sectionId = entry.target.id;
+                  const badgeId = `badge-container-${sectionId}`;
+                  const badge = document.getElementById(badgeId);
+                  if (badge && !localStorage.getItem(badgeId)) {
+                     localStorage.setItem(badgeId, 'earned');
+                     badge.classList.add('earned');
+                  }
+               }
+            });
+         }, { threshold: 0.5 });
+
+         document.querySelectorAll('section:not(#hero, #badges)').forEach(section => {
+            badgeObserver.observe(section);
+         });
+
+         // Restore earned badges on page load
+         document.querySelectorAll('.badge-container').forEach(badge => {
+            if (localStorage.getItem(badge.id)) {
+               badge.classList.add('earned');
+            }
+         });
+
+         // AI Assistant: Text-to-Speech for sections
+         let isNarrationEnabled = false;
+         const narrationToggle = document.getElementById('narration-toggle');
+         const adjustPronunciation = (text) => {
+            return text
+               .replace(/\bPranavi\b/g, 'Pra-na-vee')
+               .replace(/\bPreethi Tatambhotla\b/g, 'Pree-thee Tah-tam-bhot-lah')
+               .replace(/\bSrimati\b/g, 'Shree-mah-tee')
+               .replace(/\bShridhar Babu\b/g, 'Shree-dhar Bah-boo')
+               .replace(/\bJonnalagadda Anuradha\b/g, 'Joh-na-la-ga-da Ah-noo-ra-dhah')
+               .replace(/\bPrince Rama Verma\b/g, 'Prince Ra-ma Ver-ma')
+               .replace(/\bShobha Naidu\b/g, 'Shoh-bhah Nye-doo')
+               .replace(/\bTanikella Bharani\b/g, 'Thah-nee-kel-lah Bha-ra-nee')
+               .replace(/\bChandra Bose\b/g, 'Chan-drah Bose')
+               .replace(/\bRavindra Bharathi\b/g, 'Rah-vin-drah Bha-ra-thee');
+         };
+
+         const speakText = (text, section) => {
+            window.speechSynthesis.cancel();
+            const adjustedText = adjustPronunciation(text);
+            const utterance = new SpeechSynthesisUtterance(adjustedText);
+            const voices = window.speechSynthesis.getVoices();
+            const preferredVoice = voices.find(voice => voice.lang === 'en-IN') || 
+                                  voices.find(voice => voice.name.includes('Google UK English')) || 
+                                  voices.find(voice => voice.lang === 'en-US') || 
+                                  voices[0];
+            utterance.voice = preferredVoice;
+            utterance.lang = preferredVoice.lang || 'en-IN';
+            utterance.rate = 0.9;
+            utterance.pitch = 1.0;
+            utterance.volume = 0.8;
+            utterance.onend = () => {
+               section.classList.add('spoken');
+               if (isNarrationEnabled) {
+                  // If narration is still enabled, proceed to next section
+                  const sections = Array.from(document.querySelectorAll('section'));
+                  const currentIndex = sections.indexOf(section);
+                  if (currentIndex < sections.length - 1) {
+                     const nextSection = sections[currentIndex + 1];
+                     const text = getSectionText(nextSection);
+                     if (text) {
+                        currentUtterance = speakText(text, nextSection);
+                        currentSection = nextSection;
+                     }
+                  }
+               }
+            };
+            window.speechSynthesis.speak(utterance);
+            return utterance;
+         };
+
+         const getSectionText = (section) => {
+            const textElements = section.querySelectorAll('h1, h2, h3, p, li, strong');
+            let text = '';
+            textElements.forEach(element => {
+               if (!element.closest('#countdown') && 
+                   !element.closest('.invitation-placeholder')) {
+                  text += element.textContent.trim() + ' ';
+               }
+            });
+            return text.trim();
+         };
+
+         let currentUtterance = null;
+         let currentSection = null;
+
+         // Narration toggle
+         narrationToggle.addEventListener('click', () => {
+            isNarrationEnabled = !isNarrationEnabled;
+            narrationToggle.innerHTML = `<i class="fas fa-${isNarrationEnabled ? 'pause' : 'play'}"></i>`;
+            narrationToggle.setAttribute('aria-label', isNarrationEnabled ? 'Pause narration' : 'Start narration');
+            
+            if (!isNarrationEnabled) {
+               window.speechSynthesis.cancel();
+               currentUtterance = null;
+               currentSection = null;
+               document.querySelectorAll('section').forEach(section => section.classList.remove('spoken'));
+            } else if (currentSection) {
+               // Resume narration from current section
+               const text = getSectionText(currentSection);
+               if (text) {
+                  currentUtterance = speakText(text, currentSection);
+               }
+            }
+         });
+
+         const speechObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+               const section = entry.target;
+               if (entry.isIntersecting && isNarrationEnabled) {
+                  window.speechSynthesis.cancel();
+                  currentUtterance = null;
+                  currentSection = section;
+                  if (!section.classList.contains('spoken')) {
+                     const text = getSectionText(section);
+                     if (text) {
+                        currentUtterance = speakText(text, section);
+                     }
+                  }
+               } else if (section === currentSection && !isNarrationEnabled) {
+                  window.speechSynthesis.cancel();
+                  currentUtterance = null;
+                  currentSection = null;
+                  section.classList.remove('spoken');
+               }
+            });
+         }, { threshold: 0.5 });
+
+         document.querySelectorAll('section').forEach(section => speechObserver.observe(section));
+
+         window.speechSynthesis.onvoiceschanged = () => {
+            document.querySelectorAll('section.spoken').forEach(section => {
+               section.classList.remove('spoken');
+            });
+         };
+      });
+    </script>
+  </body>
+</html>

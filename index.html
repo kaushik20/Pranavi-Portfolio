@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="Join us for Sri Pranavi Chintalapudi's Ranga Pravesam at Ravindra Bharathi Auditorium, a celebration of her Kuchipudi journey. Event details, RSVP, and gallery.">
-    <meta name="keywords" content="Ranga Pravesam, Kuchipudi, Ravindra Bharathi, Indian Classical Dance, Pranavi Chintalapudi, Dance Performance, Cultural Event">
+    <meta name="description" content="Portfolio of Sri Pranavi Chintalapudi, showcasing her journey as a Kuchipudi dancer, Carnatic musician, and Computer Science student at BITS Pilani, Dubai Campus.">
+    <meta name="keywords" content="Pranavi Chintalapudi, Kuchipudi Dancer, Carnatic Music, Computer Science Student, Portfolio, Indian Classical Dance, Cultural Arts, Wall of Fame, Awards">
     <meta name="author" content="Pranavi Chintalapudi">
-    <meta property="og:title" content="Sri Pranavi Chintalapudi's Ranga Pravesam Celebration" />
-    <meta property="og:description" content="Celebrate Sri Pranavi Chintalapudi's Kuchipudi debut at Ravindra Bharathi Auditorium. RSVP and explore her dance journey." />
-    <meta property="og:url" content="https://pranavi-rangapravesam.github.io/" />
+    <meta property="og:title" content="Sri Pranavi Chintalapudi's Portfolio" />
+    <meta property="og:description" content="Explore the multifaceted journey of Sri Pranavi Chintalapudi in Kuchipudi dance, Carnatic music, and Computer Science." />
+    <meta property="og:url" content="https://pranavi-portfolio.github.io/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./Images/pranavi-hero.jpg" />
     <meta name="robots" content="index,follow">
-    <title>Sri Pranavi Chintalapudi - Ranga Pravesam Celebration</title>
+    <title>Sri Pranavi Chintalapudi - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
       :root {
@@ -39,6 +39,7 @@
         --badge-text: #2c0b0e;
         --badge-ribbon: #8b0000;
         --badge-glow: rgba(255, 215, 0, 0.6);
+        --timeline-line: #8b0000;
       }
       [data-theme="light"] {
         --bg-color: #ffffff;
@@ -63,6 +64,7 @@
         --badge-text: #2c0b0e;
         --badge-ribbon: #228b22;
         --badge-glow: rgba(192, 192, 192, 0.5);
+        --timeline-line: #228b22;
       }
       html, body {
         font-family: 'Lora', serif;
@@ -298,6 +300,76 @@
       .gallery-item:hover {
         transform: scale(1.05);
       }
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 4px;
+        background: var(--timeline-line);
+        transform: translateX(-50%);
+      }
+      .timeline-item {
+        position: relative;
+        margin: 2rem 0;
+        width: 50%;
+        padding: 0 2rem;
+        box-sizing: border-box;
+      }
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+      }
+      .timeline-item:nth-child(even) {
+        left: 50%;
+        text-align: left;
+      }
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--button-bg);
+        border: 2px solid var(--bg-color);
+        z-index: 1;
+      }
+      .timeline-item:nth-child(odd)::before {
+        right: -8px;
+      }
+      .timeline-item:nth-child(even)::before {
+        left: -8px;
+      }
+      .timeline-content {
+        background: var(--achievement-item-bg);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      .timeline-content:hover {
+        transform: scale(1.05);
+      }
+      .timeline-content img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .timeline-content h3 {
+        font-size: 1.2rem;
+        margin: 0 0 0.5rem;
+        color: var(--button-bg);
+      }
       .badge-container {
         background: var(--badge-bg);
         color: var(--badge-text);
@@ -390,21 +462,26 @@
       .contact-item a:hover {
         color: var(--button-bg);
       }
-      #rsvp form {
+      .contact-note {
+        font-size: 1rem;
+        margin-top: 1rem;
+        opacity: 0.8;
+      }
+      #contact form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         max-width: 500px;
         margin: 0 auto;
       }
-      #rsvp input, #rsvp select {
+      #contact input, #contact textarea {
         padding: 0.8rem;
         border: 1px solid var(--text-color);
         border-radius: 5px;
         font-size: 1rem;
         font-family: 'Lora', serif;
       }
-      #rsvp button {
+      #contact button {
         padding: 0.8rem;
         background: var(--button-bg);
         color: #fffaf0;
@@ -414,7 +491,7 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
       }
-      #rsvp button:hover {
+      #contact button:hover {
         background: var(--button-hover);
       }
       #theme-toggle {
@@ -507,6 +584,20 @@
         #badges .badge-grid {
           grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         }
+        .timeline::before {
+          left: 20px;
+        }
+        .timeline-item {
+          width: 100%;
+          left: 0 !important;
+          text-align: left;
+          padding-left: 3rem;
+          padding-right: 1rem;
+        }
+        .timeline-item::before {
+          left: 12px;
+          right: auto;
+        }
       }
     </style>
   </head>
@@ -514,7 +605,7 @@
     <header>
       <div class="logo">
         <a href="#hero">
-          <img src="./Images/logo.webp" alt="Pranavi Ranga Pravesam Logo">
+          <img src="./Images/logo.webp" alt="Pranavi Chintalapudi Portfolio Logo">
         </a>
       </div>
       <button class="hamburger" aria-label="Toggle navigation">
@@ -522,10 +613,12 @@
       </button>
       <nav class="nav-links">
         <a href="#hero" class="nav-item">Home</a>
-        <a href="#about" class="nav-item">Introduction</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
         <a href="#achievements" class="nav-item">Achievements</a>
         <a href="#gallery" class="nav-item">Gallery</a>
-        <a href="#award_gallery" class="nav-item">Wall of Fame</a>
+        <a href="#wall-of-fame" class="nav-item">Wall of Fame</a>
+        <a href="#contact" class="nav-item">Contact</a>
         <a href="#badges" class="nav-item">Badges</a>
       </nav>
       <button id="narration-toggle" aria-label="Toggle narration"><i class="fas fa-play"></i></button>
@@ -535,26 +628,23 @@
       <section id="hero">
         <div style="display: flex; align-items: center; justify-content: center; padding: 2rem;">
           <div style="flex-shrink: 0; text-align: center;">
-            <img src="./Images/Header.webp" alt="Pranavi in Kuchipudi attire during practice" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
+            <img src="./Images/Header.webp" alt="Pranavi in Kuchipudi attire" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
           </div>
           <div style="max-width: 600px; text-align: left;">
-            <h1>Welcome to Sri Pranavi Chintalapudi's Portfolio Profile</h1>
-            <p>Celebrating the journey of Sri Pranavi Chintalapudi's Kuchipudi, from beginner to a Professional.</p>
+            <h1>Sri Pranavi Chintalapudi's Portfolio</h1>
+            <p>A passionate Kuchipudi dancer, soulful Carnatic musician, and innovative Computer Science student, Pranavi weaves tradition with technology in her vibrant journey.</p>
+            <a href="#contact" class="cta-btn">Get in Touch</a>
           </div>
         </div>
       </section>
-      <section id="about" class="section">
+      <section id="about" class="section boxed-section">
         <h2>About Sri Pranavi Chintalapudi</h2>
-        <p class="section-subtitle">Her journey in Kuchipudi and beyond</p>
-        <p>Sri Pranavi Chintalapudi is an aspiring Engineering student at BITS Pilani, Dubai Campus in Computer Science, and a dedicated Kuchipudi dancer, training under Smt. Preethi Tatambhotla for the past eight years.</p>
-        <p>She started learning Kuchipudi at an age of 5 and blossomed into an accomplished dancer under tutelage of Preethi.</p>
-        <p>A certified Kuchipudi dancer from University of Silicon Andhra, USA, currently pursuing her Diploma while aptly balancing her academics.</p>
-        <p>Pranavi has played lead roles with her Guru in ballets like Kalyana Srinivasam and Navarasa Natabhamini and won accolades from artists such as Sri Tanikella Bharani Garu and Oscar Awardee Sri Chandra Bose Garu.</p>
-        <p>A recipient of titles, “Nritya Vismaya” and “Naatya Surabhi”, she performed across India and UAE at various religious and cultural venues such as Nadaneerajanam, Guruvayoor, Chidambaram and Kolhapur.</p>
-        <p>Pranavi is a winner of several prizes which include Shobha Naidu International Award, initiated in the memory of the Guru of her Guru.</p>
-        <p>A versatile artist, a devoted rasika of music, Pranavi began learning Carnatic music at the age of five, completed the 4th grade of 8-Grade music certification offered by Bridge Academy, Chennai with an “Outstanding” remark.</p>
-        <p>An ardent lover of instruments, she earned acclaim on Carnatic Violin.</p>
-        <p>An aspiring polyglot, she is committed to mastering Sanskrit from Samskrutha Bharathi Institute LLC, Dubai.</p>
+        <p class="section-subtitle">A multifaceted artist and scholar</p>
+        <p>Sri Pranavi Chintalapudi is an accomplished Kuchipudi dancer, trained under Smt. Preethi Tatambhotla for eight years, and a Computer Science student at BITS Pilani, Dubai Campus.</p>
+        <p>Starting her Kuchipudi journey at age 5, she has performed lead roles in ballets like Kalyana Srinivasam and Navarasa Natabhamini, earning accolades from renowned artists.</p>
+        <p>A certified Kuchipudi dancer from the University of Silicon Andhra, USA, she is pursuing a Diploma while excelling academically.</p>
+        <p>Pranavi is also a trained Carnatic vocalist and violinist, with an "Outstanding" remark in her 4th-grade certification from Bridge Academy, Chennai.</p>
+        <p>An aspiring polyglot, she is mastering Sanskrit through Samskrutha Bharathi Institute LLC, Dubai, reflecting her commitment to cultural heritage.</p>
       </section>
       <section id="achievements" class="section">
         <h2>Achievements</h2>
@@ -567,12 +657,11 @@
             </div>
             <ul>
               <li>1st Prize - Virtual International Competition (Spring Nectar Foundation, USA)</li>
-              <li>Earned titles "Nritya Vismaya" and "Naatya Surabhi" at Devdasi Nritya Mandir, Orissa</li>
-              <li>Won 2nd Prize - Shobha Naidu Awards 2021</li>
-              <li>Lead Roles - Kalyana Srinivasam and Navarasa Natabhamini ballets by Tanmayi Art Studio</li>
-              <li>Won Gold Medal (1st Prize) - Indywood Talent Hunt International 2021 (UAE)</li>
-              <li>Certified in Kuchipudi by the University of Silicon Andhra</li>
-              <li>Presented with the Rajiv Gandhi PRatibha Puraskar as a recognition from the Govt of Telangana and Singidi Organization after her Kuchipudi RangaPravesam on 2nd August 2025</li>
+              <li>Titles "Nritya Vismaya" and "Naatya Surabhi" (Devdasi Nritya Mandir, Orissa)</li>
+              <li>2nd Prize - Shobha Naidu Awards 2021</li>
+              <li>Lead Roles - Kalyana Srinivasam and Navarasa Natabhamini</li>
+              <li>Gold Medal - Indywood Talent Hunt International 2021 (UAE)</li>
+              <li>Rajiv Gandhi Pratibha Puraskar (Govt of Telangana, 2025)</li>
             </ul>
           </div>
           <div class="achievement-item">
@@ -584,10 +673,8 @@
               <li>2nd Prize - Margazhi Utsavam (Reha Music and Dance Institute)</li>
               <li>3rd Prize - Sangeet Samrat 2018 (Vibgyor Live)</li>
               <li>2nd Prize - Vivek 157 (Consulate General of India, Dubai)</li>
-              <li>Passed with First Class in Parambhikm Part 2 (Carnatic Music - Theory & Practical) from Pracheen Kala Kendra</li>
-              <li>Regularly Participated in the Guruvandanam program (Team Mohana)</li>
-              <li>Participated in the Epic Choir Event (Reha Music and Dance Institute)</li>
-              <li>Outstanding performance in Bridge Academy Exams.</li>
+              <li>First Class in Parambhikm Part 2 (Pracheen Kala Kendra)</li>
+              <li>Outstanding performance in Bridge Academy Exams</li>
             </ul>
           </div>
           <div class="achievement-item">
@@ -596,14 +683,14 @@
               <h3>Sanskrit</h3>
             </div>
             <ul>
-              <li>1st Class distinction - Pravasha, Parichaya Patravalaya Samskritha Bharathi Institute LLC</li>
+              <li>1st Class distinction - Pravasha, Parichaya (Samskrutha Bharathi)</li>
             </ul>
           </div>
         </div>
       </section>
       <section id="gallery" class="section">
         <h2>Gallery</h2>
-        <p class="section-subtitle">Moments from Pranavi's dance journey</p>
+        <p class="section-subtitle">Moments from Pranavi's artistic journey</p>
         <div class="gallery-grid">
           <div class="gallery-item">
             <img src="./Images/Pranavi_Nadaneerajanam.webp" alt="Pranavi at Nadaneerajanam" loading="lazy">
@@ -616,71 +703,102 @@
           </div>
         </div>
       </section>
+      <section id="wall-of-fame" class="section">
+        <h2>Wall of Fame</h2>
+        <p class="section-subtitle">A timeline of Pranavi's prestigious awards and certificates</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/spring_nectar_2021.jpg" alt="Certificate for 1st Prize at Spring Nectar Foundation" loading="lazy">
+              <h3>1st Prize - Spring Nectar Foundation</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/nritya_vismaya.jpg" alt="Nritya Vismaya Title Certificate" loading="lazy">
+              <h3>Nritya Vismaya Title</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/naatya_surabhi.jpg" alt="Naatya Surabhi Title Certificate" loading="lazy">
+              <h3>Naatya Surabhi Title</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/shobha_naidu_2021.jpg" alt="Certificate for 2nd Prize at Shobha Naidu Awards 2021" loading="lazy">
+              <h3>2nd Prize - Shobha Naidu Awards 2021</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/indywood_2021.jpg" alt="Gold Medal at Indywood Talent Hunt 2021" loading="lazy">
+              <h3>Gold Medal - Indywood Talent Hunt 2021</h3>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <img src="./Images/awards/rajiv_gandhi_2025.jpg" alt="Rajiv Gandhi Pratibha Puraskar Certificate 2025" loading="lazy">
+              <h3>Rajiv Gandhi Pratibha Puraskar 2025</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <h2>Contact Pranavi</h2>
+        <p class="section-subtitle">Get in touch for collaborations or inquiries</p>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
       <section id="badges" class="section">
         <h2>Badge Dashboard</h2>
-        <p class="section-subtitle">Celebrate your exploration of Pranavi's Ranga Pravesam</p>
+        <p class="section-subtitle">Celebrate your exploration of Pranavi's portfolio</p>
         <div class="badge-grid">
           <div id="badge-container-about" class="badge-container">
             <div class="badge-content">
               <i class="fas fa-user badge-icon"></i>
-              <h3 class="badge-title">Welcome Badge</h3>
-              <p class="badge-message">Explored Pranavi's Journey!</p>
+              <h3 class="badge-title">About Explorer</h3>
+              <p class="badge-message">Learned about Pranavi!</p>
             </div>
           </div>
-          <div id="badge-container-guru" class="badge-container">
+          <div id="badge-container-skills" class="badge-container">
             <div class="badge-content">
-              <i class="fas fa-graduation-cap badge-icon"></i>
-              <h3 class="badge-title">Guru's Dedication</h3>
-              <p class="badge-message">Honored the Guru!</p>
-            </div>
-          </div>
-          <div id="badge-container-venue" class="badge-container">
-            <div class="badge-content">
-              <i class="fas fa-building badge-icon"></i>
-              <h3 class="badge-title">Venue Explorer</h3>
-              <p class="badge-message">Discovered Ravindra Bharathi!</p>
+              <i class="fas fa-star badge-icon"></i>
+              <h3 class="badge-title">Skills Explorer</h3>
+              <p class="badge-message">Discovered Pranavi's talents!</p>
             </div>
           </div>
           <div id="badge-container-achievements" class="badge-container">
             <div class="badge-content">
               <i class="fas fa-trophy badge-icon"></i>
               <h3 class="badge-title">Achievements Explorer</h3>
-              <p class="badge-message">Celebrated Pranavi's Success!</p>
-            </div>
-          </div>
-          <div id="badge-container-event" class="badge-container">
-            <div class="badge-content">
-              <i class="fas fa-calendar-check badge-icon"></i>
-              <h3 class="badge-title">Event Explorer</h3>
-              <p class="badge-message">Discovered the Event!</p>
-            </div>
-          </div>
-          <div id="badge-container-invitation" class="badge-container">
-            <div class="badge-content">
-              <i class="fas fa-envelope badge-icon"></i>
-              <h3 class="badge-title">Invitation Preview</h3>
-              <p class="badge-message">Checked the Invitation!</p>
-            </div>
-          </div>
-          <div id="badge-container-chief-guests" class="badge-container">
-            <div class="badge-content">
-              <i class="fas fa-users badge-icon"></i>
-              <h3 class="badge-title">Guests</h3>
-              <p class="badge-message">Visited the Guests!</p>
+              <p class="badge-message">Celebrated Pranavi's success!</p>
             </div>
           </div>
           <div id="badge-container-gallery" class="badge-container">
             <div class="badge-content">
               <i class="fas fa-images badge-icon"></i>
-              <h3 class="badge-title">Gallery</h3>
-              <p class="badge-message">Browsed the Gallery!</p>
+              <h3 class="badge-title">Gallery Explorer</h3>
+              <p class="badge-message">Browsed Pranavi's journey!</p>
             </div>
           </div>
-          <div id="badge-container-rsvp" class="badge-container">
+          <div id="badge-container-wall-of-fame" class="badge-container">
             <div class="badge-content">
-              <i class="fas fa-check-circle badge-icon"></i>
-              <h3 class="badge-title">RSVP Badge</h3>
-              <p class="badge-message">Joined the Celebration!</p>
+              <i class="fas fa-medal badge-icon"></i>
+              <h3 class="badge-title">Wall of Fame Explorer</h3>
+              <p class="badge-message">Admired Pranavi's awards!</p>
+            </div>
+          </div>
+          <div id="badge-container-contact" class="badge-container">
+            <div class="badge-content">
+              <i class="fas fa-envelope badge-icon"></i>
+              <h3 class="badge-title">Contact Badge</h3>
+              <p class="badge-message">Reached out to Pranavi!</p>
             </div>
           </div>
         </div>
@@ -689,15 +807,19 @@
     <footer>
       <div class="contact-items">
         <div class="contact-item">
-          <a href="https://www.instagram.com/tanmayiartstudio/" target="_blank" aria-label="Follow Tanmayi Art Studio on Instagram"><i class="fab fa-instagram"></i> @tanmayiartstudio</a>
+          <a href="https://www.instagram.com/spc2_01/" target="_blank" aria-label="Follow Pranavi on Instagram"><i class="fab fa-instagram"></i> @spc2_01</a>
         </div>
         <div class="contact-item">
-          <a href="https://www.instagram.com/spc2_01/" target="_blank" aria-label="Follow Tanmayi Art Studio on Instagram"><i class="fab fa-instagram"></i> @spc2_01</a>
+          <a href="mailto:pranavi@example.com" aria-label="Email Pranavi"><i class="fas fa-envelope"></i> sripranavi20jan@gmail.com</a>
         </div>
+        <div class="contact-item">
+          <a href="tel:+971504572209" aria-label="Call Pranavi"><i class="fas fa-phone"></i> +971504572209</a>
+        </div>
+        <p class="contact-note">Interested in performances, collaborations, or academic inquiries? Reach out to Pranavi for opportunities in dance, music, or technology.</p>
       </div>
       <div class="footer-bar">
         <p>
-          <button id="backToTop">© <span id="current-year"></span> Sri Pranavi Chintalapudi's Ranga Pravesam. Crafted with love for a memorable celebration.</button>
+          <button id="backToTop">© <span id="current-year"></span> Sri Pranavi Chintalapudi's Portfolio. Crafted with passion for showcasing talent.</button>
         </p>
       </div>
     </footer>
@@ -723,24 +845,6 @@
                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
             });
          });
-         
-         // Countdown timer
-         const eventDate = new Date('August 2, 2025 17:30:00 GMT+0530');
-         const countdown = document.getElementById('countdown');
-         if (countdown) {
-            setInterval(() => {
-               const now = new Date();
-               const diff = eventDate - now;
-               if (diff > 0) {
-                  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                  countdown.textContent = `${days}d ${hours}h ${minutes}m to the event!`;
-               } else {
-                  countdown.textContent = 'The event has started!';
-               }
-            }, 1000);
-         }
          
          // Navigation smooth scrolling
          document.querySelectorAll("header .nav-links a").forEach(link => {
@@ -814,14 +918,9 @@
             return text
                .replace(/\bPranavi\b/g, 'Pra-na-vee')
                .replace(/\bPreethi Tatambhotla\b/g, 'Pree-thee Tah-tam-bhot-lah')
-               .replace(/\bSrimati\b/g, 'Shree-mah-tee')
-               .replace(/\bShridhar Babu\b/g, 'Shree-dhar Bah-boo')
-               .replace(/\bJonnalagadda Anuradha\b/g, 'Joh-na-la-ga-da Ah-noo-ra-dhah')
-               .replace(/\bPrince Rama Verma\b/g, 'Prince Ra-ma Ver-ma')
                .replace(/\bShobha Naidu\b/g, 'Shoh-bhah Nye-doo')
                .replace(/\bTanikella Bharani\b/g, 'Thah-nee-kel-lah Bha-ra-nee')
-               .replace(/\bChandra Bose\b/g, 'Chan-drah Bose')
-               .replace(/\bRavindra Bharathi\b/g, 'Rah-vin-drah Bha-ra-thee');
+               .replace(/\bChandra Bose\b/g, 'Chan-drah Bose');
          };
 
          const speakText = (text, section) => {
@@ -841,7 +940,6 @@
             utterance.onend = () => {
                section.classList.add('spoken');
                if (isNarrationEnabled) {
-                  // If narration is still enabled, proceed to next section
                   const sections = Array.from(document.querySelectorAll('section'));
                   const currentIndex = sections.indexOf(section);
                   if (currentIndex < sections.length - 1) {
@@ -862,10 +960,7 @@
             const textElements = section.querySelectorAll('h1, h2, h3, p, li, strong');
             let text = '';
             textElements.forEach(element => {
-               if (!element.closest('#countdown') && 
-                   !element.closest('.invitation-placeholder')) {
-                  text += element.textContent.trim() + ' ';
-               }
+               text += element.textContent.trim() + ' ';
             });
             return text.trim();
          };
@@ -873,7 +968,6 @@
          let currentUtterance = null;
          let currentSection = null;
 
-         // Narration toggle
          narrationToggle.addEventListener('click', () => {
             isNarrationEnabled = !isNarrationEnabled;
             narrationToggle.innerHTML = `<i class="fas fa-${isNarrationEnabled ? 'pause' : 'play'}"></i>`;
@@ -885,7 +979,6 @@
                currentSection = null;
                document.querySelectorAll('section').forEach(section => section.classList.remove('spoken'));
             } else if (currentSection) {
-               // Resume narration from current section
                const text = getSectionText(currentSection);
                if (text) {
                   currentUtterance = speakText(text, currentSection);

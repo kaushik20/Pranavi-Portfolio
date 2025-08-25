@@ -599,6 +599,50 @@
           right: auto;
         }
       }
+      .performance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .performance-item {
+        background: var(--card-bg);
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        text-align: left;
+      }
+      .performance-item:hover {
+        transform: scale(1.05);
+      }
+      .performance-item img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .performance-item h3 {
+        font-size: 1.2rem;
+        color: var(--button-bg);
+        margin: 0 0 0.5rem;
+      }
+      .performance-item p {
+        font-size: 1rem;
+        color: var(--text-color);
+        margin: 0 0 0.5rem;
+      }
+      .performance-item .cta-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .performance-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -616,6 +660,7 @@
         <a href="#about" class="nav-item">About</a>
         <a href="#achievements" class="nav-item">Achievements</a>
         <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#performances" class="nav-item">Performances</a>
         <a href="#wall-of-fame" class="nav-item">Wall of Fame</a>
         <a href="#contact" class="nav-item">Contact</a>
         <a href="#badges" class="nav-item">Badges</a>
@@ -636,6 +681,7 @@
           </div>
         </div>
       </section>
+      
       <section id="about" class="section boxed-section">
         <h2>About Sri Pranavi Chintalapudi</h2>
         <img src="./Images/Header.webp" alt="Pranavi in Kuchipudi attire" style="width: 200px; height: 200px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); margin-right: 2rem;">
@@ -649,6 +695,7 @@
         <p>An ardent lover of instruments, she earned acclaim on Carnatic Violin.</p>
         <p>An aspiring polyglot, she is mastering Sanskrit through Samskrutha Bharathi Institute LLC, Dubai, reflecting her commitment to cultural heritage.</p>
       </section>
+      
       <section id="achievements" class="section">
         <h2>Achievements</h2>
         <p class="section-subtitle">Celebrating Pranavi's accomplishments</p>
@@ -691,6 +738,84 @@
           </div>
         </div>
       </section>
+
+      <section id="performances" class="section">
+        <h2>Performances</h2>
+        <p class="section-subtitle">A showcase of Pranavi's captivating performances</p>
+        <div class="performance-grid">
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Nadaneerajanam.webp" alt="Pranavi performing at Nadaneerajanam" loading="lazy">
+            <h3>Nadaneerajanam, Tirumala</h3>
+            <p>Performed a soulful Kuchipudi recital at the prestigious Nadaneerajanam platform, Tirumala, captivating devotees with intricate footwork and expressions.</p>
+            <p><strong>Date:</strong>July 2022 | <strong>Location:</strong> Tirumala, India</p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Guruvayur.webp" alt="Pranavi at Guruvayur Temple" loading="lazy">
+            <h3>Guruvayur Temple</h3>
+            <p>Presented a devotional Kuchipudi performance at Guruvayur Temple, blending spirituality and artistry in a divine setting.</p>
+            <p><strong>Date:</strong>July 2022 | <strong>Location:</strong> Guruvayur, India</p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Kolhapur.webp" alt="Pranavi at Kolhapur" loading="lazy">
+            <h3>Kolhapur Mahalakshmi Temple</h3>
+            <p>Delivered a mesmerizing Kuchipudi performance at Kolhapur, showcasing the divine narrative of Mahalakshmi.</p>
+            <p><strong>Date:</strong>July 2025 | <strong>Location:</strong> Kolhapur, India</p>
+          </div>
+
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Kolhapur.webp" alt="Pranavi at Kolhapur" loading="lazy">
+            <h3>BAPS Hindu Mandir</h3>
+            <p>Performed with team in BAPS Hindu Mandir</p>
+            <p><strong>Date:</strong>April 2025 | <strong>Location:</strong> Abu Dhabi, UAE</p>
+          </div>
+
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Kolhapur.webp" alt="Pranavi at Kolhapur" loading="lazy">
+            <h3>Performance at Indian Consulate general, Ras Al Khaimah, UAE</h3>
+            <p>Performed in the indian consulate in Ras al Khaimah, UAE for the 76th Republic Day Celebrations in UAE</p>
+            <p><strong>Date:</strong> 2025 | <strong>Location:</strong> Kolhapur, India</p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Ravindra_Bharati.webp" alt="Pranavi at Ravindra Bharati" loading="lazy">
+            <h3>Ravindra Bharati</h3>
+            <p>Did her Ranga Pravesam in Ravindra Bharati.</p>
+            <p><strong>Date:</strong>August 2025 | <strong>Location:</strong> Hyderabad, India</p>
+          </div>
+
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Ravindra_Bharati.webp" alt="Pranavi at Ravindra Bharati" loading="lazy">
+            <h3>Ravindra Bharati</h3>
+            <p>Participated in the Rajiv Sadbhavna Divas and 3rd Nritangana program conducted by Singidi Organization and was awarded with Rajiv Gandhi Pratibha Puraskar at Ravindra Bharati</p>
+            <p><strong>Date:</strong>August 2025 | <strong>Location:</strong> Hyderabad, India</p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_KalyanaSrinivasam.webp" alt="Pranavi in Kalyana Srinivasam" loading="lazy">
+            <h3>Kalyana Srinivasam</h3>
+            <p>Played the lead role in the ballet "Kalyana Srinivasam," a divine depiction of Lord Krishna’s wedding, performed with Natya Jyothi Academy.</p>
+            <p><strong>Date:</strong> September 2023 | <strong>Location:</strong> Dubai, UAE</p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Vijayadasami.webp" alt="Pranavi at Vijayadasami Celebrations" loading="lazy">
+            <h3>Vijayadasami Celebrations, Tanmayi</h3>
+            <p>Choreographed and performed a divine Kuchipudi offering for Devi during Vijayadasami celebrations, showcasing her creativity and devotion.</p>
+            <p><strong>Date:</strong> 2023 | <strong>Location:</strong> Dubai, UAE</p>
+            <p><a href="https://www.facebook.com" class="cta-btn">View Performance</a></p>
+          </div>
+          
+          <div class="performance-item">
+            <img src="./Images/Pranavi_Sankranti.webp" alt="Pranavi at Sankranti Event" loading="lazy">
+            <h3>Sankranti Sambaralu, Telugu Association </h3>
+            <p>Performed the captivating "Pranavalayava" at the Sankranti event, earning praise for her vibrant energy.</p>
+            <p><strong>Date:</strong> January 2023 | <strong>Location:</strong> Dubai, UAE</p>
+            <p><a href="https://www.facebook.com" class="cta-btn">View Performance</a></p>
+          </div>
+      </section>
+      
       <section id="gallery" class="section">
         <h2>Gallery</h2>
         <p class="section-subtitle">Moments from Pranavi's artistic journey</p>
@@ -721,6 +846,7 @@
           </div>
         </div>
       </section>
+      
       <section id="wall-of-fame" class="section">
         <h2>Wall of Fame</h2>
         <p class="section-subtitle">A timeline of Pranavi's prestigious awards and certificates</p>
@@ -781,6 +907,7 @@
           </div>
         </div>
       </section>
+      
       <section id="contact" class="section">
         <h2>Contact Pranavi</h2>
         <p class="section-subtitle">Get in touch for collaborations or inquiries</p>
@@ -791,6 +918,7 @@
           <button type="submit">Send Message</button>
         </form>
       </section>
+      
       <section id="badges" class="section">
         <h2>Badge Dashboard</h2>
         <p class="section-subtitle">Celebrate your exploration of Pranavi's portfolio</p>

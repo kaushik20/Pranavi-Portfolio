@@ -1142,8 +1142,11 @@
           const adjustedText = adjustPronunciation(text);
           const utterance = new SpeechSynthesisUtterance(adjustedText);
           const voices = window.speechSynthesis.getVoices();
-          const preferredVoice = voices.find(voice => voice.lang === 'en-IN') || voices.find(voice => voice.name.includes('Google UK English')) || voices.find(voice => voice.lang === 'en-US') || voices[0];
-          utterance.voice= preferredVoice;
+          const preferredVoice = voices.find(voice => voice.lang === 'en-IN') ||
+                            voices.find(voice => voice.name.includes('Google UK English')) ||
+                            voices.find(voice => voice.lang === 'en-US') ||
+                            voices[0];
+          utterance.voice = preferredVoice;
           utterance.lang = preferredVoice.lang || 'en-IN';
           utterance.rate = 0.9;
           utterance.pitch = 1.0;

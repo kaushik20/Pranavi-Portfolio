@@ -216,6 +216,53 @@
         margin-left: auto;
         margin-right: auto;
       }
+      .guru-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .guru-item {
+        background: var(--achievement-item-bg);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+      }
+      .guru-item:hover {
+        transform: scale(1.05);
+      }
+      .guru-item .card-header {
+        text-align: center;
+      }
+      .guru-item img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      .guru-item h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: var(--button-bg);
+      }
+      .guru-item p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        opacity: 0.8;
+      }
+      .guru-item ul {
+        padding-left: 18px;
+        text-align: left;
+      }
+      .guru-item ul li {
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
       #achievements {
         background: var(--achievement-container-bg);
       }
@@ -621,6 +668,15 @@
           grid-template-columns: 1fr;
         }
       }
+      @media (max-width: 768px) {
+        .guru-container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .guru-item {
+          width: 90%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -680,35 +736,47 @@
       </section>
 
       <section id="guru" class="section boxed-section">
-        <h2>About Guru's</h2>
-        <p class="section-subtitle">Celebrating guru's who guided path by path</p>
+        <h2>About Gurus</h2>
+        <p class="section-subtitle">Guiding lights behind Pranavi’s journey</p>
         <div class="guru-container">
           <div class="guru-item">
             <div class="card-header">
-              <img></img>
-              <h3>Smt.Preeti Tatambotla</h3>
-              <p>Kuchipudi</p>
+              <img src="./Images/guru1.webp" alt="Smt. Preethi Tatambhotla">
+              <h3>Smt. Preethi Tatambhotla</h3>
+              <p>Kuchipudi Guru</p>
             </div>
-            <ul></ul>
+            <ul>
+              <li>Trained Pranavi for over 8 years</li>
+              <li>Expert in traditional Kuchipudi repertoire</li>
+              <li>Guided major stage performances and ballets</li>
+            </ul>
           </div>
           <div class="guru-item">
             <div class="card-header">
-              <img></img>
-              <h3>Smt.Priya</h3>
-              <p>Music</p>
+              <img src="./Images/guru2.webp" alt="Smt. Priya">
+              <h3>Smt. Priya</h3>
+              <p>Carnatic Music Guru</p>
             </div>
-            <ul></ul>
+            <ul>
+              <li>Mentored in Carnatic vocal music</li>
+              <li>Helped achieve “Outstanding” certification</li>
+              <li>Focused on classical compositions and ragas</li>
+            </ul>
           </div>
           <div class="guru-item">
             <div class="card-header">
-              <img></img>
-              <h3>Smt.XXXX</h3>
-              <p>Violin</p>
+              <img src="./Images/guru3.webp" alt="Violin Guru">
+              <h3>Smt. [Name]</h3>
+              <p>Violin Guru</p>
             </div>
-            <ul></ul>
+            <ul>
+              <li>Trained in Carnatic violin techniques</li>
+              <li>Developed instrumental proficiency</li>
+              <li>Encouraged musical expression and discipline</li>
+            </ul>
           </div>
         </div>
-      </section>  
+      </section>
       
       <section id="achievements" class="section">
         <h2>Achievements</h2>
